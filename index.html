@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <link rel="stylesheet" href="styles/basic.css" />
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="scripts/mainslide.js" defer></script>
+    <script src="scripts/rankingtab.js" defer></script>
+
+    <title>랑이네 식탁</title>
+
+    <meta property="og:title" content="랑이네 식탁" />
+    <meta property="og:description" content="랑이네 식탁" />
+    <meta property="og:image" content="image/thumbnail.png" />
+  </head>
+  <body>
+    <header>
+      <!-- 최상단 내비게이션 -->
+      <section>
+        <ul class="top-nav">
+          <li>
+            <a href="">
+              <img src="image/logo.png" class="logo" alt="랑이네식탁 로고" />
+            </a>
+          </li>
+          <li>
+            <form class="search-form">
+              <input
+                type="text"
+                title="검색"
+                placeholder="검색 내용을 입력하세요"
+              />
+              <button class="search-btn" type="submit">
+                <img src="image/search.png" class="searchimg" alt="검색" />
+              </button>
+            </form>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="image/shopping-cart.png"
+                class="shoppingcart"
+                alt="장바구니"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- 2번째 내비게이션 -->
+      <section>
+        <ul class="middle-nav">
+          <li>
+            <a href="" class="middle-nav-btn active"><h1>홈</h1></a>
+          </li>
+          <li>
+            <a href="" class="middle-nav-btn"><h1>랭킹</h1></a>
+          </li>
+          <li>
+            <a href="" class="middle-nav-btn"><h1>간식</h1></a>
+          </li>
+          <li>
+            <a href="" class="middle-nav-btn"><h1>사료</h1></a>
+          </li>
+          <li>
+            <a href="" class="middle-nav-btn"><h1>파우더</h1></a>
+          </li>
+          <li>
+            <a href="" class="middle-nav-btn"><h1>이벤트</h1></a>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <main>
+      <!-- 메인 배너 슬라이드 -->
+      <section class="main-slide">
+        <ul class="main-slide-inner">
+          <li>
+            <a href="">
+              <img
+                src="image/mainbanner1.png"
+                id="slide-img1"
+                alt="메인배너1 이달의 이벤트"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="image/mainbanner2.png"
+                id="slide-img2"
+                alt="메인배너2 보조식 신규상품"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="image/mainbanner3.png"
+                id="slide-img3"
+                alt="메인배너3 카카오톡 플러스친구 이벤트"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="pagination">
+          <button class="pagination-dot active"></button>
+          <button class="pagination-dot"></button>
+          <button class="pagination-dot"></button>
+        </div>
+      </section>
+      <!-- 외부링크 탭-->
+      <section>
+        <ul class="link-tab">
+          <li>
+            <a href="">
+              <img
+                src="image/store.png"
+                class="link-tab-img"
+                alt="오프라인 매장"
+              />
+              오프라인 매장
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                src="image/insta.png"
+                class="link-tab-img"
+                alt="인스타그램"
+              />
+              인스타그램
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="image/blog.png" class="link-tab-img" alt="블로그" />
+              블로그
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="image/kakao.png" class="link-tab-img" alt="카톡 상담" />
+              카톡 상담
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- 카테고리 랭킹 -->
+      <section>
+        <div class="categoryranking-top">
+          <div class="categoryranking-title">
+            <h1>카테고리 랭킹</h1>
+            <a href="">더보기 ></a>
+          </div>
+          <div>
+            <ul class="categoryranking-btntab">
+              <li>
+                <button
+                  class="categoryranking-btn active"
+                  id="rankingbtn1"
+                  data-target="rankingtab1"
+                >
+                  일상 간식
+                </button>
+              </li>
+              <li>
+                <button
+                  class="categoryranking-btn"
+                  id="rankingbtn2"
+                  data-target="rankingtab2"
+                >
+                  훈련용 간식
+                </button>
+              </li>
+              <li>
+                <button
+                  class="categoryranking-btn"
+                  id="rankingbtn3"
+                  data-target="rankingtab3"
+                >
+                  보조식
+                </button>
+              </li>
+              <li>
+                <button
+                  class="categoryranking-btn"
+                  id="rankingbtn4"
+                  data-target="rankingtab4"
+                >
+                  기념일 간식
+                </button>
+              </li>
+              <li>
+                <button
+                  class="categoryranking-btn"
+                  id="rankingbtn5"
+                  data-target="rankingtab5"
+                >
+                  간식세트
+                </button>
+              </li>
+              <li>
+                <button
+                  class="categoryranking-btn"
+                  id="rankingbtn6"
+                  data-target="rankingtab6"
+                >
+                  사료
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 카테고리별 랭킹모음 -->
+        <div class="ranking-wrapper">
+          <!-- 일상 간식 -->
+          <ul class="rankingitembox active" id="rankingtab1">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking1-1"
+                  src="image/tab1-1.png"
+                  alt="건강식 산양유쿠키 60g (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>건강식 산양유쿠키 60g (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">5,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.7 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking1-2"
+                  src="image/tab1-2.png"
+                  alt="꼬소한 닭육포 40g"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>꼬소한 닭육포 40g</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">4,500원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,250원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking1-3"
+                  src="image/tab1-3.png"
+                  alt="한우 우신 불리스틱 수제껌 2개입"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>한우 우신 불리스틱 수제껌 2개입</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">16,250원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>8,120원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.8 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <!-- 훈련용 간식 -->
+          <ul class="rankingitembox" id="rankingtab2">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking2-1"
+                  src="image/tab2-1.png"
+                  alt="연어 트릿 40g (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>연어 트릿 40g (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">8,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>4,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking2-2"
+                  src="image/tab2-2.png"
+                  alt="자색고구마 큐브 70g"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>자색고구마 큐브 70g</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">5,900원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,950원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.6 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking2-3"
+                  src="image/tab2-3.png"
+                  alt="북어 트릿 40g"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>북어 트릿 40g</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">8,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>4,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.8 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <!-- 보조식 -->
+          <ul class="rankingitembox" id="rankingtab3">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking3-1"
+                  src="image/tab3-1.png"
+                  alt="고단저지 캥거루 화식 (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>고단저지 캥거루 화식 (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">4,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking3-2"
+                  src="image/tab3-2.png"
+                  alt="기력회복 황태죽"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>기력회복 황태죽</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">4,500원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,250원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.5 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking3-3"
+                  src="image/tab3-3.png"
+                  alt="닭가슴살 테린"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>닭가슴살 테린</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">5,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.8 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <!-- 기념일 간식 -->
+          <ul class="rankingitembox" id="rankingtab4">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking4-1"
+                  src="image/tab4-1.png"
+                  alt="단호박 경단 50g (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>단호박 경단 50g (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">5,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.6 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking4-2"
+                  src="image/tab4-2.png"
+                  alt="멍치킨 3개입"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>멍치킨 3개입</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">5,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>2,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking4-3"
+                  src="image/tab4-3.png"
+                  alt="피크닉 멍김밥"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>피크닉 멍김밥</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">6,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>3,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.7 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <!-- 간식세트 -->
+          <ul class="rankingitembox" id="rankingtab5">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking5-1"
+                  src="image/tab5-1.png"
+                  alt="랑이네식탁 BEST 10종 (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>랑이네식탁 BEST 10종 (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">25,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>12,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking5-2"
+                  src="image/tab5-2.png"
+                  alt="댕댕이 치맥세트"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>댕댕이 치맥세트</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">20,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>10,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.5 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking5-3"
+                  src="image/tab5-3.png"
+                  alt="미니 케이크 5종"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>미니 케이크 5종</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">15,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>7,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.7 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+          <!-- 사료 -->
+          <ul class="rankingitembox" id="rankingtab6">
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking6-1"
+                  src="image/tab6-1.png"
+                  alt="순수 연어 수제사료 2kg (1 + 1)"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span><h4 class="tag-event">EVENT</h4></span>
+                    <h2>순수 연어 수제사료 2kg (1 + 1)</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">48,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>24,000원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.9 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking6-2"
+                  src="image/tab6-2.png"
+                  alt="생식 소고기 수제사료 2kg"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>생식 소고기 수제사료 2kg</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">53,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>26,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.8 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="" class="rankingitem">
+                <img
+                  class="rankingimg ranking6-3"
+                  src="image/tab6-3.png"
+                  alt="멸균 닭고기 수제사료 2kg"
+                />
+                <ul class="rankingitem-inner">
+                  <li class="rankingitem-title">
+                    <span><h4 class="tag-sale">SALE</h4></span>
+                    <span hidden><h4 class="tag-event">EVENT</h4></span>
+                    <h2>멸균 닭고기 수제사료 2kg</h2>
+                  </li>
+                  <li>
+                    <span class="cancelprice">49,000원</span>
+                    <div class="pricebox">
+                      <h3 class="discount">50%</h3>
+                      <h3>24,500원</h3>
+                    </div>
+                  </li>
+                  <li class="saving">적립금 1%</li>
+                  <li class="rating">
+                    <img src="image/star.png" class="star" alt="평점" />
+                    <span class="rating-number">4.8 / 5.0</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 카테고리 -->
+      <section>
+        <div class="categorybox">
+          <ul class="category-inner">
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab1.png"
+                  alt="일상 간식"
+                  class="categoryimg"
+                />
+                일상 간식
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab2.png"
+                  alt="훈련용 간식"
+                  class="categoryimg"
+                />
+                훈련용 간식
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab3.png"
+                  alt="보조식"
+                  class="categoryimg"
+                />
+                보조식
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab4.png"
+                  alt="기념일 간식"
+                  class="categoryimg"
+                />
+                기념일 간식
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab5.png"
+                  alt="간식세트"
+                  class="categoryimg"
+                />
+                간식세트
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  src="image/Categorytab6.png"
+                  alt="사료"
+                  class="categoryimg"
+                />
+                사료
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 구매 후기 -->
+      <section>
+        <div class="review">
+          <div class="review-title">
+            <h1>구매 후기</h1>
+            <a href="">더보기 ></a>
+          </div>
+          <div class="review-inner">
+            <div class="reviewbox">
+              <ul class="reviewinfo">
+                <li class="comment">
+                  저희 집 푸들 2마리가 서로 입맛이 너무 달라서 각자 잘 먹는 걸로
+                  사주려고 이곳저곳에서 샀는데, 랑이네 식탁에서 구매했더니 둘 다
+                  너무 잘 먹어요~^^ 강아지들 호불호가 안 갈리는 수제간식
+                  강추합니다!
+                </li>
+                <li class="rating review-rating">
+                  <img src="image/star.png" class="star" alt="평점" />
+                  <span class="rating-number">5.0 / 5.0</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="review-bottom">
+            <div class="review-user">
+              <h4 id="nickname">큰티니작은밤비</h4>
+              <h4>반려동물: 강아지</h4>
+            </div>
+            <div><h4>2026.02.18</h4></div>
+          </div>
+        </div>
+      </section>
+      <!-- 공지사항 -->
+      <section>
+        <img
+          src="image/notice.png"
+          alt="공지사항-설 연휴 배송공지"
+          id="notice"
+        />
+      </section>
+    </main>
+    <!-- 푸터 -->
+    <footer>
+      <ul class="footer-info">
+        <li>
+          <a href="">
+            <img src="image/logo.png" class="logo" alt="랑이네식탁 로고" />
+          </a>
+        </li>
+        <li class="sns-tab">
+          <a href="">
+            <img
+              src="image/insta.png"
+              class="sns"
+              alt="랑이네식탁 인스타그램"
+            />
+          </a>
+          <a href="">
+            <img src="image/blog.png" class="sns" alt="랑이네식탁 블로그" />
+          </a>
+          <a href="">
+            <img
+              src="image/kakao.png"
+              class="sns"
+              alt="랑이네식탁 카카오채널"
+            />
+          </a>
+        </li>
+        <li class="info-tab">
+          <a href=""><h4>이용약관</h4></a>
+          <a href=""><h4>개인정보취급방침</h4></a>
+          <a href=""><h4>사업자정보확인</h4></a>
+        </li>
+        <li class="company-tab">
+          <a href=""><h4>회사소개</h4></a>
+          <a href=""><h4>도매문의</h4> </a>
+        </li>
+        <li>
+          <h4>전화: 070-4133-1007</h4>
+        </li>
+        <li class="footer-copyright">
+          <h4>본 사이트는 비상업적 용도로 제작되었습니다.</h4>
+        </li>
+      </ul>
+    </footer>
+    <!-- 하단 고정 내비게이션 -->
+    <nav class="bottom-nav">
+      <ul class="bottom-nav-inner">
+        <li>
+          <a href="">
+            <img src="image/home.png" alt="홈" class="nav-img" />
+            홈
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="image/community.png" alt="커뮤니티" class="nav-img" />
+            커뮤니티
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="image/hamburger.png" alt="카테고리" class="nav-img" />
+            카테고리
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="image/search.png" alt="검색" class="nav-img" />
+            검색
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="image/user.png" alt="마이페이지" class="nav-img" />
+            마이페이지
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
